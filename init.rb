@@ -19,7 +19,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
   end
 
   def resource
-    @resource ||= RestClient::Resource.new("http://sql-query.heroku.com")
+    @resource ||= RestClient::Resource.new("https://sql-query.heroku.com")
   end
 
   def execute_sql(database_url, sql)
