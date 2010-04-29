@@ -1,5 +1,3 @@
-require 'cgi'
-
 class Heroku::Command::Sql < Heroku::Command::Base
 
   def index
@@ -23,7 +21,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
   end
 
   def execute_sql(database_url, sql)
-    resource["/query?database_url=#{CGI::escape(database_url)}&sql=#{CGI::escape(sql)}"].get
+    resource["/query"].post(:database_url => database_url, :sql => sql)
   rescue RestClient::InternalServerError
     puts ex.inspect
   end
