@@ -51,3 +51,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
   end
 
 end
+
+Heroku::Command::Help.group('SQL Console') do |group|
+  group.command 'sql', 'launches a sql console for your app'
+end
