@@ -1,5 +1,3 @@
-require File.dirname(__FILE__) + '/lib/heroku/commands/sql'
-
 class Heroku::Command::Sql < Heroku::Command::Base
 
   def index
@@ -52,8 +50,4 @@ class Heroku::Command::Sql < Heroku::Command::Base
     File.open(sqlconsole_history_file(app), "a") { |f| f.puts sql + "\n" }
   end
 
-end
-
-Heroku::Command::Help.group('SQL Console') do |group|
-  group.command 'sql', 'launches a sql console for your app'
 end
