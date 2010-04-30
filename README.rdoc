@@ -12,7 +12,7 @@ To install:
 
     $ heroku sql
     SQL console for example.heroku.com
-    >> SELECT * FROM users;
+    SQL> SELECT * FROM users;
     +---------------------------------------------------------------------------------------------------------
     | id | handle | token     |                   secret                    |        last_updated_at         |
     +---------------------------------------------------------------------------------------------------------
