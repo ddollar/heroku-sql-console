@@ -23,7 +23,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
   def execute_sql(database_url, sql)
     resource["/query"].post(:database_url => database_url, :sql => sql)
   rescue RestClient::InternalServerError
-    puts ex.inspect
+    display "An error has occurred."
   end
 
   def sqlconsole_history_dir
