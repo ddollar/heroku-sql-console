@@ -8,13 +8,17 @@ To install:
 
     $ heroku plugins:install git://github.com/ddollar/heroku-sql-console.git
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Send me a pull request. Bonus points for topic branches.
+== Usage
+
+    $ heroku sql
+    SQL console for example.heroku.com
+    >> SELECT * FROM users;
+    +---------------------------------------------------------------------------------------------------------
+    | id | handle | token     |                   secret                    |        last_updated_at         |
+    +---------------------------------------------------------------------------------------------------------
+    |  1 | xxxxx  | 15317640- | v1jlk2Y2o2KhAvIf98SqF3emR0ON532X00b2aDPjNI  | Thu Apr 29 03:12:45 -0700 2010 |
+    |  2 | yyyy   | 8938502-  | blu8ZkQdtIGU52Dva2KlkZtXQHZXW5jftikPLsJnUmE | Thu Apr 29 03:12:46 -0700 2010 |
+    +---------------------------------------------------------------------------------------------------------
 
 == License
 
