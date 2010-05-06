@@ -20,6 +20,33 @@ To install:
     |  2 | yyyy   | 8938502-  | blu8ZkQdtIGU52Dva2KlkZtXQHZXW5jftikPLsJnUmE | Thu Apr 29 03:12:46 -0700 2010 |
     +---------------------------------------------------------------------------------------------------------
 
+    SQL> show tables
+    +-------------------------------------+
+    | table_name                          |
+    +-------------------------------------+
+    | delayed_jobs                        |
+    | messages                            |
+    | messages_participants               |
+    | open_id_authentication_associations |
+    | open_id_authentication_nonces       |
+    | participants                        |
+    | schema_migrations                   |
+    | settings                            |
+    +-------------------------------------+
+
+    SQL> describe participants
+    +---------------------------------------------------------------------------------------------------------------+
+    | Column          | Type                        | Modifiers                                                     |
+    +---------------------------------------------------------------------------------------------------------------+
+    | id              | integer                     | primary key not null nextval('participants_id_seq'::regclass) |
+    | email           | character varying(255)      |                                                               |
+    | created_at      | timestamp without time zone |                                                               |
+    | updated_at      | timestamp without time zone |                                                               |
+    | activated       | boolean                     |                                                               |
+    | activation_hash | character varying(255)      |                                                               |
+    +---------------------------------------------------------------------------------------------------------------+
+
+
 == License
 
 Please see MIT-LICENSE for more details.
