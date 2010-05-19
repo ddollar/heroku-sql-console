@@ -46,6 +46,23 @@ To install:
     | activation_hash | character varying(255)      |                                                               |
     +---------------------------------------------------------------------------------------------------------------+
 
+    SQL> \d delayed_jobs
+                                         Table "public.delayed_jobs"
+       Column   |            Type             |                         Modifiers
+    ------------+-----------------------------+-----------------------------------------------------------
+     id         | integer                     | not null default nextval('delayed_jobs_id_seq'::regclass)
+     priority   | integer                     | default 0
+     attempts   | integer                     | default 0
+     handler    | text                        |
+     last_error | text                        |
+     run_at     | timestamp without time zone |
+     locked_at  | timestamp without time zone |
+     failed_at  | timestamp without time zone |
+     locked_by  | character varying(255)      |
+     created_at | timestamp without time zone |
+     updated_at | timestamp without time zone |
+    Indexes:
+        "delayed_jobs_pkey" PRIMARY KEY, btree (id)
 
 == License
 
