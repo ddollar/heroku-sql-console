@@ -2,10 +2,10 @@ class Heroku::Command::Sql < Heroku::Command::Base
 
   def index
     app = extract_app
-    database_url = heroku.console(app, "puts ENV['DATABASE_URL']")
+    database_url = heroku.config_vars(app)['DATABASE_URL']
 
     sqlconsole_history_read(app)
-    
+
     display "SQL console for #{app}.#{heroku.host}"
     while sql = Readline.readline('SQL> ')
       unless sql.nil? || sql.strip.empty?
