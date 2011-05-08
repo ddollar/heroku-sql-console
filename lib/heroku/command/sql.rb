@@ -1,5 +1,10 @@
+# SQL console like for your heroku app's database
 class Heroku::Command::Sql < Heroku::Command::Base
 
+  # sql
+  #
+  # access the sql console for your datasabe
+  #
   def index
     app = extract_app
     database_url = heroku.config_vars(app)['DATABASE_URL']
