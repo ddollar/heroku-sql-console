@@ -21,6 +21,7 @@ class Heroku::Command::Sql < Heroku::Command::Base
     end
   end
 
+  private
   def resource
     @resource ||= RestClient::Resource.new("https://sql-console.heroku.com")
   end
