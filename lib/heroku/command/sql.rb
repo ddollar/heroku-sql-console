@@ -1,5 +1,5 @@
 # SQL console like for your heroku app's database
-class Heroku::Command::Sql < Heroku::Command::Base
+class Heroku::Command::Sql < Heroku::Command::BaseWithApp
 
   # sql
   #
