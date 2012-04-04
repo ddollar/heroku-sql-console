@@ -63,6 +63,10 @@ To install:
      updated_at | timestamp without time zone |
     Indexes:
         "delayed_jobs_pkey" PRIMARY KEY, btree (id)
+    
+    SQL> exit
+
+    Exits the sql console
 
 == License
 
