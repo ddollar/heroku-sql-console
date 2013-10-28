@@ -1,5 +1,5 @@
-= Heroku SQL
+# Heroku SQL
 
-== DEPRECATED
+## DEPRECATED
 
 This service has been deprecated. Please use `heroku psql` instead.
