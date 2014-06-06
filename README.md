@@ -2,4 +2,4 @@
 
 ## DEPRECATED
 
-This service has been deprecated. Please use `heroku psql` instead.
+This service has been deprecated. Please use `heroku pg:psql` instead.
