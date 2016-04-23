@@ -1,5 +1,5 @@
-# Heroku SQL
+# Deprecated
 
-## DEPRECATED
+This project is deprecated and is no longer being maintained.
 
-This service has been deprecated. Please use `heroku pg:psql` instead.
+Please check out my current project [Convox](https://convox.com) for all of your deployment needs!
